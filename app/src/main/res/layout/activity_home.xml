@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewArticle"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBefore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridViewCaddie"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TableLayout
+        android:id="@+id/tableLayoutCaddie"
+        android:layout_width="263dp"
+        android:layout_height="333dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:background="#5B5B5B"
+        android:gravity="start|fill_horizontal"
+        android:orientation="vertical"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewArticle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPay">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/headerArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Article" />
+
+            <TextView
+                android:id="@+id/headerPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prix" />
+
+            <TextView
+                android:id="@+id/headerStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantite" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Stocks"
+        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Unit price"
+        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArticle" />
+
+    <TextView
+        android:id="@+id/textViewArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="27dp"
+        android:text="Article"
+        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayoutCaddie" />
+
+    <TextView
+        android:id="@+id/textViewArticleContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="36dp"
+        android:text="pomme de terre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/textViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayoutCaddie" />
+
+    <TextView
+        android:id="@+id/textViewPriceContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="70dp"
+        android:text="3.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArticleContent" />
+
+    <TextView
+        android:id="@+id/textViewStockContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="72dp"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewStock"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPriceContent" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="40dp"
+        android:text="next"
+        android:textAlignment="center"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonBefore"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/buttonBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="4dp"
+        android:text="buy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonNext" />
+
+    <Button
+        android:id="@+id/buttonBefore"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="40dp"
+        android:text="prev"
+        android:textAlignment="center"
+        app:cornerRadius="0px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/buttonPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="19dp"
+        android:text="Pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCaddie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:text="Caddie"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayoutCaddie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogout" />
+
+    <Button
+        android:id="@+id/buttonClearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="241dp"
+        android:text="Clear all"
+        app:layout_constraintStart_toEndOf="@+id/tableLayoutCaddie"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPay" />
+
+    <Button
+        android:id="@+id/buttonRemoveItem"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:text="remove item"
+        app:layout_constraintStart_toEndOf="@+id/tableLayoutCaddie"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClearAll" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="194dp"
+        android:text="total:"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClearAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tableLayoutCaddie"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPay" />
+
+    <TextView
+        android:id="@+id/textViewQuantityNeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="23dp"
+        android:text="Quantite voulue"
+        app:layout_constraintStart_toEndOf="@+id/imageViewArticle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStock" />
+
+    <Button
+        android:id="@+id/buttonDecrease"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="24dp"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBuy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonIncrease" />
+
+    <Button
+        android:id="@+id/buttonIncrease"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="24dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBuy"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDecrease"
+        app:layout_constraintStart_toEndOf="@+id/buttonNext" />
+
+    <TextView
+        android:id="@+id/textViewQuantityNeededContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantityNeeded"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStockContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

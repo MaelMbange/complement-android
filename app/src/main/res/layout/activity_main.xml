@@ -18,6 +18,7 @@
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
+        android:text="1234"
         app:layout_constraintBottom_toTopOf="@+id/switchIsNewAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,6 +35,7 @@
         android:ems="10"
         android:hint="username"
         android:inputType="textEmailAddress"
+        android:text="Curim"
         app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,4 +68,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <Switch
+        android:id="@+id/switchLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="100dp"
+        android:checked="false"
+        android:textOff="English"
+        android:textOn="Francais"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchIsNewAccount"
+        app:layout_constraintVertical_bias="0.056" />
 </androidx.constraintlayout.widget.ConstraintLayout>
